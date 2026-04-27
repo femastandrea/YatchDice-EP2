@@ -10,9 +10,17 @@ def rolar_dados(n):
         i+=1
     return dados_rolados
 
+#Guardar dado
 def guardar_dado(dados_rolados, dados_no_estoque, dado_para_guardar):
     dado_guardar = dados_rolados[dado_para_guardar]
     dados_no_estoque.append(dado_guardar)
     dados_rolados.pop(dado_para_guardar)
     lista_final = [dados_rolados, dados_no_estoque]
     return lista_final
+
+#Remover dado
+def remover_dado(dados_rolados, dados_no_estoque, dado_para_remover):
+    dado_remover = dados_no_estoque[dado_para_remover]
+    dados_rolados.append(dado_remover)
+    dados_no_estoque.pop(dado_para_remover)
+    return[dados_rolados, dados_no_estoque]
