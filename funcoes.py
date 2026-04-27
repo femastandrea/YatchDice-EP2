@@ -35,3 +35,10 @@ def calcula_pontos_regra_simples(faces_rolados):
         pontos[i] = valor
         i+=1
     return pontos
+
+#Calcula pontos na regra avançada - Soma
+def calcula_pontos_soma(lista):
+    soma = 0
+    for nums in lista:
+        soma += nums
+    return soma
