@@ -71,3 +71,13 @@ def calcula_pontos_full_house(lista):
                 if lista.count(n2) == 2:
                     return n*3 + n2*2
     return 0
+
+#Calcula pontos na regra avançada - Quadra
+def calcula_pontos_quadra(lista):
+    soma = 0
+    for n in lista:
+        soma += n
+    for num in lista:
+        if lista.count(num) >= 4:
+            return soma
+    return 0
