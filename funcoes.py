@@ -24,3 +24,14 @@ def remover_dado(dados_rolados, dados_no_estoque, dado_para_remover):
     dados_rolados.append(dado_remover)
     dados_no_estoque.pop(dado_para_remover)
     return[dados_rolados, dados_no_estoque]
+
+#Calcula pontos na regra simples
+def calcula_pontos_regra_simples(faces_rolados):
+    pontos = {}
+    i=1
+    while i<=6:
+        contador = faces_rolados.count(i)
+        valor = contador*i
+        pontos[i] = valor
+        i+=1
+    return pontos
