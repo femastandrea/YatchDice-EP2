@@ -81,3 +81,10 @@ def calcula_pontos_quadra(lista):
         if lista.count(num) >= 4:
             return soma
     return 0
+
+#Calcula pontos na regra avançada - Quina
+def calcula_pontos_quina(lista):
+    for num in lista:
+        if lista.count(num) >= 5:
+            return 50
+    return 0
