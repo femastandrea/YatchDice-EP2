@@ -62,3 +62,12 @@ def calcula_pontos_sequencia_alta(lista):
         return 30
     else:
         return 0
+    
+#Calcula pontos na regra avançada - Full House
+def calcula_pontos_full_house(lista):
+    for n in lista:
+        if lista.count(n) == 3:
+            for n2 in lista:
+                if lista.count(n2) == 2:
+                    return n*3 + n2*2
+    return 0
