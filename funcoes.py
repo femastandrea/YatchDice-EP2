@@ -99,3 +99,17 @@ def calcula_pontos_regra_avancada(lista):
     dic['sequencia_alta'] = calcula_pontos_sequencia_alta(lista)
     dic['sequencia_baixa'] = calcula_pontos_sequencia_baixa(lista)
     return dic
+
+#Faz jogada
+def faz_jogada(lista,string,dic):
+    regra_simples = [1,2,3,4,5,6]
+
+    if string in regra_simples or string in ['1','2','3','4','5','6']:
+        categoria = int(string)
+        x = calcula_pontos_regra_simples(lista)
+        dic['regra_simples'][categoria] = x[categoria]
+    else:
+        x = calcula_pontos_regra_avancada(lista)
+        dic['regra_avancada'][string] = x[string]
+
+    return dic
