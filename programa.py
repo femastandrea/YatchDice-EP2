@@ -108,16 +108,16 @@ def faz_jogada(lista, string, dic):
 
 
 def imprime_cartela(cartela):
-    print("\n=== CARTELA ===")
-    print("--- Regra Simples ---")
+    print("Cartela de Pontos:")
+    print("-------------------------")
     for k, v in cartela['regra_simples'].items():
-        valor = str(v) if v != -1 else "---"
-        print(f"  {k}: {valor}")
-    print("--- Regra Avançada ---")
+        valor = str(v).zfill(2) if v != -1 else "  "
+        print(f"| {k}:               | {valor} |")
     for k, v in cartela['regra_avancada'].items():
-        valor = str(v) if v != -1 else "---"
-        print(f"  {k}: {valor}")
-    print("===============\n")
+        valor = str(v).zfill(2) if v != -1 else "  "
+        espacos = ' ' * (16 - len(str(k)))
+        print(f"| {k}:{espacos}| {valor} |")
+    print("-------------------------")
 
 
 def eh_inteiro_nao_negativo(s):
